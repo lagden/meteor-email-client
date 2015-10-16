@@ -13,7 +13,7 @@ meteor
 
 ## Example
 
-[http://lagden-email-client.meteor.com](http://lagden-email-client.meteor.com)
+[http://lagden-email.meteor.com/](http://lagden-email.meteor.com/)
 
 ## License
 

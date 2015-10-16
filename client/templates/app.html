@@ -1,5 +1,9 @@
 <template name="app">
+  <div class="loading {{isReady}}">
+    {{> loading}}
+  </div>
   <div class="gs">
-    {{> yield}}
+    {{> inbox}}
+    {{!-- {{> yield }} --}}
   </div>
 </template>

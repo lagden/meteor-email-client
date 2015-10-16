@@ -1,4 +1,6 @@
 function listaEmail(caption) {
+	Meteor._sleepForMs(500);
+
 	caption = caption || false;
 	const settings = {};
 	if (caption) {

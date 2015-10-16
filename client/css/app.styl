@@ -151,3 +151,38 @@ for k, v in $bullets
       text-overflow: ellipsis
       > small.right
         float: right
+
+// Modal
+duration = 0.45s
+
+.loading
+  position fixed
+  top 0
+  right 0
+  bottom 0
+  left 0
+  margin auto
+  width 100%
+  height 100%
+  overflow hidden
+  background-color: rgba($cor.filtro, 0.8)
+  color: $cor.white
+  backface-visibility hidden
+  will-change transform, visibility
+
+  visibility hidden
+  transform translateY(-100%)
+  transition transform duration, visibility 0s duration
+
+  display flex
+  justify-content center
+  align-items center
+
+  &:focus
+    outline none
+
+.loading--open
+  visibility visible
+  transform translate(0%)
+  transition: transform duration
+  z-index 1000

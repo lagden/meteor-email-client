@@ -30,7 +30,8 @@
   "xo": {
     "envs": [
       "node",
-      "browser"
+      "browser",
+      "meteor"
     ],
     "esnext": true,
     "ignores": [

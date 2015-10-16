@@ -14,6 +14,13 @@ function lowerCase(s) {
 	return s.toLowerCase();
 }
 
+function getIsReady() {
+	return Router.current().ready() ? '' : 'loading--open';
+}
+
 Meteor.startup(startupApp);
 Template.registerHelper('lowerCase', lowerCase);
 Template.registerHelper('formatDate', formatDate);
+Template.app.helpers({
+	isReady: getIsReady
+});
