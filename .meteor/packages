@@ -20,6 +20,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 mquandalle:stylus
 iron:router
 check
-mquandalle:bower
 markdown
-reactive-var
