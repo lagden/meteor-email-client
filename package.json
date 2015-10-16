@@ -42,10 +42,12 @@
       "Template",
       "Mongo",
       "Session",
+      "ReactiveVar",
       "Assets",
       "check",
       "Emails",
-      "svgLocalStorage"
+      "svgLocalstorage",
+      "$"
     ],
     "rules": {
       "new-cap": [

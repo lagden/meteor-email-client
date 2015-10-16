@@ -21,3 +21,5 @@ mquandalle:stylus
 iron:router
 check
 mquandalle:bower
+markdown
+reactive-var

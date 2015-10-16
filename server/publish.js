@@ -10,7 +10,7 @@ function listaEmail(caption) {
 
 function lerEmail(emailId) {
 	check(emailId, String);
-	return Emails.find({_id: emailId});
+	return Emails.find({_id: emailId}, {limit: 1});
 }
 
 Meteor.publish('listaEmail', listaEmail);

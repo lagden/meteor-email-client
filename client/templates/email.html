@@ -1,6 +1,6 @@
 <template name="email">
   <div class="email">
       <h3>{{dados.titulo}}</h3>
-      <p>{{{dados.corpo}}}</p>
+      {{#markdown}}{{dados.corpo}}{{/markdown}}
   </div>
 </template>

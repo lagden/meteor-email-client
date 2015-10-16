@@ -1,0 +1,7 @@
+{
+  "name": "meteor-email-client",
+  "dependencies": {
+    "svg-localstorage": "0.2.0"
+  },
+  "private": true
+}

@@ -3,7 +3,7 @@
 normalize-css()
 base()
 
-edit()
+// edit()
 
 $cor = {
   fundo: #F3F3F3
@@ -11,11 +11,16 @@ $cor = {
   lista: #f6f5f3
   email: white
   white: white
+  green: #97c89b
+  divide: #e5e4e2
+  gold: #FFCC00
+  icon: #d1d0ce
 }
 
 $lista
-  padding-left 0
   list-style none
+  margin: 0
+  padding 0
 
 $lista-item
   > a
@@ -38,9 +43,20 @@ unstyledLink()
   &:active,
   &:focus
       outline none
+.icon
+  width: 16px
+  height: @width
+
+.emails__icon
+  width: 14px
+  height: @width
+  fill: $cor.icon
+
+.starred
+  fill: $cor.gold
 
 .gs
-  center(960px, 20px)
+  center(1110px, 20px)
   cf()
 
 .filtro
@@ -48,21 +64,27 @@ unstyledLink()
   background-color: $cor.filtro
   @extends $vh
   @extends $boxs
-  padding: 15px
   > h3
+    padding: 15px
+    margin: 0
     font-size: 1em
     color: rgba($cor.white, 0.1)
     text-transform: uppercase
 
 .lista
+  border: 1px solid $cor.divide
+  border-width: 0 1px
   col(0.3, gutter: 0)
   background-color: $cor.lista
   @extends $vh
+  @extends $boxs
 
 .email
   col(0.5, gutter: 0)
   background-color: $cor.email
   @extends $vh
+  @extends $boxs
+  padding: 25px
 
 .labels,
 .emails
@@ -71,3 +93,61 @@ unstyledLink()
 .labels__item,
 .emails__item
   @extends $lista-item
+
+.labels__item
+  > a
+    unstyledLink()
+    position: relative
+    color: $cor.white
+    display: block
+    padding: 15px
+    &:hover,
+    &:active
+      background-color: rgba($cor.white, 0.2)
+
+.labels__bullet
+  margin: auto
+  position: absolute
+  top: 0
+  left: auto
+  bottom: 0
+  right: 15px
+  display: inline-block
+  width: 10px
+  height: @width
+  background-color: $cor.green
+  overflow: hidden
+
+$bullets = {
+  clients: #e77149
+  social: #dfc966
+  family: #8bcec7
+  friends: #b58ee7
+}
+
+for k, v in $bullets
+  .labels__bullet--{k}
+    background-color: v
+
+.emails__item
+  border: 1px solid $cor.divide
+  border-width: 0 0 1px 0
+  > a
+    unstyledLink()
+    display: block
+    padding: 15px
+    &:hover,
+    &:active
+      background-color: $cor.green
+      & > span .emails__icon
+        fill: $cor.white
+      & > span .icon.starred
+        @extends .starred
+
+    > span
+      display: block
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      > small.right
+        float: right

@@ -10,12 +10,6 @@ function getCaptions() {
 	}];
 }
 
-function lowerCase(s) {
-	return s.toLowerCase();
-}
-
 Template.label.helpers({
 	captions: getCaptions
 });
-
-Template.registerHelper('lowerCase', lowerCase);
