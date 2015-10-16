@@ -1,0 +1,21 @@
+<template name="label">
+  <div class="filtro">
+    <h3>Labels</h3>
+    <ul class="labels">
+      <li class="labels__item">
+        <a href="/">
+          <span class="labels__caption">Inbox</span>
+          <span class="labels__bullet labels__bullet--inbox"></span>
+        </a>
+      </li>
+      {{#each captions}}
+      <li class="labels__item">
+        <a href="{{pathFor route='label.filter'}}">
+          <span class="labels__caption">{{name}}</span>
+          <span class="labels__bullet labels__bullet--{{lowerCase name}}"></span>
+        </a>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

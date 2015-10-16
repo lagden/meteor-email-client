@@ -1,0 +1,73 @@
+@import 'jeet'
+
+normalize-css()
+base()
+
+edit()
+
+$cor = {
+  fundo: #F3F3F3
+  filtro: #36393e
+  lista: #f6f5f3
+  email: white
+  white: white
+}
+
+$lista
+  padding-left 0
+  list-style none
+
+$lista-item
+  > a
+    display block
+
+$vh
+  height: 100vh
+
+$boxs
+  box-sizing border-box
+
+html,
+body
+  background: $cor.fundo
+  min-height: 100%
+
+unstyledLink()
+  color inherit
+  text-decoration inherit
+  &:active,
+  &:focus
+      outline none
+
+.gs
+  center(960px, 20px)
+  cf()
+
+.filtro
+  col(0.2, gutter: 0)
+  background-color: $cor.filtro
+  @extends $vh
+  @extends $boxs
+  padding: 15px
+  > h3
+    font-size: 1em
+    color: rgba($cor.white, 0.1)
+    text-transform: uppercase
+
+.lista
+  col(0.3, gutter: 0)
+  background-color: $cor.lista
+  @extends $vh
+
+.email
+  col(0.5, gutter: 0)
+  background-color: $cor.email
+  @extends $vh
+
+.labels,
+.emails
+  @extends $lista
+
+.labels__item,
+.emails__item
+  @extends $lista-item

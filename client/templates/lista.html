@@ -1,0 +1,13 @@
+<template name="lista">
+  <div class="lista">
+    <ul class="emails">
+      {{#each lista}}
+      <li class="emails__item">
+        <a href="{{pathFor route='ler.email'}}">{{titulo}}</a>
+      </li>
+      {{else}}
+        <li>Sem emails</li>
+      {{/each}}
+    </ul>
+  </div>
+</template>

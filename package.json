@@ -1,0 +1,61 @@
+{
+  "name": "meteor-email-client",
+  "version": "0.1.0",
+  "description": "Apenas um show",
+  "keywords": [
+    "email",
+    "client"
+  ],
+  "bug": {
+    "url": "https://github.com/lagden/meteor-email-client/issues",
+    "email": "lagden@gmail.com"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Thiago Lagden",
+    "email": "lagden@gmail.com",
+    "url": "http://lagden.in"
+  },
+  "repository": "lagden/meteor-email-client",
+  "scripts": {
+    "start": "meteor"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "esnext": true,
+    "ignores": [
+      ".meteor/**"
+    ],
+    "global": [
+      "Meteor",
+      "Router",
+      "Template",
+      "Mongo",
+      "Session",
+      "Assets",
+      "check",
+      "Emails",
+      "svgLocalStorage"
+    ],
+    "rules": {
+      "new-cap": [
+        2,
+        {
+          "newIsCap": true,
+          "capIsNew": false
+        }
+      ]
+    }
+  },
+  "private": true
+}
