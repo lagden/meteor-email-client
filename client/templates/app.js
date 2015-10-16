@@ -21,6 +21,7 @@ function getIsReady() {
 Meteor.startup(startupApp);
 Template.registerHelper('lowerCase', lowerCase);
 Template.registerHelper('formatDate', formatDate);
-Template.app.helpers({
+
+Template.loading.helpers({
 	isReady: getIsReady
 });

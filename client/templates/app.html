@@ -1,9 +1,8 @@
 <template name="app">
-  <div class="loading {{isReady}}">
-    {{> loading}}
-  </div>
+  {{> yield }}
   <div class="gs">
-    {{> inbox}}
-    {{!-- {{> yield }} --}}
+    {{> label}}
+    {{> yield "lista"}}
+    {{> yield "ler"}}
   </div>
 </template>
