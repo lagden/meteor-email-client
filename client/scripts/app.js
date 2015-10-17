@@ -2,7 +2,7 @@ Session.setDefault('emailId', false);
 Session.setDefault('label', false);
 
 function startupApp() {
-	svgLocalstorage('/images/sprite.svg', '0.4.0');
+	svgLocalstorage('/images/sprite.svg', '0.1.1');
 }
 
 function formatDate(date) {

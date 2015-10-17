@@ -52,7 +52,10 @@
   "titulo": "Sobre a Princesa",
   "corpo": "Desculpe Mario, mas a Princesa está no outro castelo.",
   "label": ["Clients"],
-  "anexo": [],
+  "anexo": [{
+    "file": "cogumelo.jpg",
+    "ext": "jpg"
+  }],
   "picture": {
     "large": "http://api.randomuser.me/portraits/men/3.jpg",
     "medium": "http://api.randomuser.me/portraits/med/men/3.jpg",

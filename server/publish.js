@@ -1,4 +1,4 @@
-const timeSleep = 1000;
+const timeSleep = 2000;
 
 function inputDelay() {
 	return false;
